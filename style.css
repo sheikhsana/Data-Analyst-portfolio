@@ -52,7 +52,7 @@ nav a:hover {
 
     background:
         linear-gradient(rgba(28, 55, 45, 0.48), rgba(28, 55, 45, 0.48)),
-        url("powerbi-dashboard.png");
+        url("hero-bg.png");
 
     background-size: cover;
     background-position: center;
