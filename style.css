@@ -52,7 +52,7 @@ nav a:hover {
 
     background:
         linear-gradient(rgba(28, 55, 45, 0.48), rgba(28, 55, 45, 0.48)),
-        url("hero-bg.png");
+        url("hero-bg.jpg");
 
     background-size: cover;
     background-position: center;
@@ -60,14 +60,16 @@ nav a:hover {
 }
 
 #home h1 {
-    font-size: 52px;
-    margin-bottom: 15px;
+    font-size: 58px;
+    margin-bottom: 12px;
     letter-spacing: 1px;
+    font-weight: 600;
 }
 
 #home p {
-    font-size: 21px;
+    font-size: 20px;
     max-width: 650px;
+margin: 8px auto;
 }
 
 /* Sections */
@@ -163,5 +165,337 @@ a {
     #projects,
     #contact {
         padding: 60px 7%;
+    }
+}
+.tagline{
+font-size: 24px !important;
+font weight: 500;
+letter-spacing: 1px
+}
+.intro{
+font-size: 18px !important;
+opacity: 0.95;
+}
+.hero-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #315447;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+    background: white;
+}
+.about-card {
+    max-width: 900px;
+    margin: auto;
+    padding: 45px;
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.about-card h2 {
+    margin-bottom: 20px;
+}
+
+.about-card p {
+    color: #53635c;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.about-card strong {
+    color: #315447;
+}
+.skills-container {
+    max-width: 1000px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.88);
+    padding: 28px 18px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+}
+
+.skill-card h3 {
+    color: #315447;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.skill-card p {
+    color: #68766f;
+    font-size: 14px;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+@media (max-width: 800px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+.projects-container {
+    max-width: 1050px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.14);
+}
+
+.project-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-content {
+    padding: 28px;
+}
+
+.project-type {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #a67c52;
+    font-weight: 700;
+}
+
+.project-content h3 {
+    color: #315447;
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.project-content p {
+    color: #68766f;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #315447;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.project-button:hover {
+    background: #a67c52;
+}
+@media (max-width: 800px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+.project-card {
+    border: 1px solid rgba(49, 84, 71, 0.08);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-type {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+#projects > h2 {
+    text-align: center;
+}
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1050px;
+    margin: 30px auto;
+}
+
+.project-card {
+    width: 100%;
+    box-sizing: border-box;
+}
+#projects {
+    padding: 80px 8%;
+}
+
+#projects > h2 {
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 36px;
+    color: #315447;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    color: #315447;
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.project-content p {
+    color: #68766f;
+    line-height: 1.7;
+}
+
+.project-type {
+    color: #a67c52;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.project-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #315447;
+    color: white;
+    text-decoration: none;
+}
+
+.project-button:hover {
+    background: #a67c52;
+}
+
+.project-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    background: #f5f2ea;
+}
+#contact {
+    padding: 80px 8%;
+}
+
+.contact-card {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding: 55px 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-card h2 {
+    color: #315447;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: #68766f;
+    line-height: 1.7;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    padding: 11px 22px;
+    border-radius: 25px;
+    background: #315447;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    background: #a67c52;
+    transform: translateY(-3px);
+}
+@media (max-width: 700px) {
+
+    nav {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    #projects,
+    #contact {
+        padding: 60px 5%;
+    }
+
+    .contact-card {
+        padding: 40px 20px;
+    }
+
+    #projects > h2 {
+        font-size: 30px;
     }
 }
