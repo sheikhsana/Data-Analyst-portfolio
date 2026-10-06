@@ -1,2 +1,3 @@
 # Data-Analyst-portfolio
-My personal data analyst portfolio website showcasing SQL, Power BI, and Python project.
+My portfolio website
+[visit my portfolio website](https://sheikhsana.github.io/Data-Analyst-portfolio/)
