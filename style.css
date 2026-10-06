@@ -10,34 +10,43 @@ html {
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    color: #26352f;
+    color: #3f3540;
     background: #f5f2ea;
     line-height: 1.7;
 }
 
 /* Navigation */
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 18px 8%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 10px 18px;
     display: flex;
     justify-content: center;
-    gap: 35px;
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(10px);
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     z-index: 1000;
 }
 
 nav a {
-    color: #315447;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
+    padding: 9px 18px;
+    border-radius: 30px;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
-    color: #a67c52;
+    background: rgba(255, 255, 255, 0.75);
+    color: #5a4b55;
 }
 
 /* Home */
@@ -50,24 +59,55 @@ nav a:hover {
     text-align: center;
     padding: 120px 20px 60px;
 
-    background:
-        linear-gradient(rgba(28, 55, 45, 0.48), rgba(28, 55, 45, 0.48)),
-        url("hero-bg.jpg");
+   #home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 60px;
+    color: white;
+    overflow: hidden;
+}
 
-    background-size: cover;
-    background-position: center;
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
     color: white;
 }
 
 #home h1 {
-    font-size: 58px;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 68px;
     font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 #home p {
-    font-size: 20px;
+    font-size: 30px;
     max-width: 650px;
 margin: 8px auto;
 }
@@ -83,7 +123,7 @@ section,
 
 h2 {
     color: #315447;
-    font-size: 32px;
+    font-size: 40px;
     margin-bottom: 25px;
 }
 
@@ -167,21 +207,26 @@ a {
         padding: 60px 7%;
     }
 }
-.tagline{
-font-size: 24px !important;
-font weight: 500;
-letter-spacing: 1px
+.tagline {
+    font-size: 24px !important;
+    font-weight: 600;
+    color: #ffffff !important;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.30);
 }
-.intro{
-font-size: 18px !important;
-opacity: 0.95;
+.intro {
+    font-size: 18px !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    font-weight: 500;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.30);
 }
 .hero-button {
     display: inline-block;
     margin-top: 25px;
     padding: 12px 28px;
-    background: rgba(255, 255, 255, 0.9);
-    color: #315447;
+    background: rgba(255, 255, 255, 0.88);
+    color: #7a4d68;
     text-decoration: none;
     border-radius: 30px;
     font-weight: 600;
@@ -190,7 +235,8 @@ opacity: 0.95;
 
 .hero-button:hover {
     transform: translateY(-3px);
-    background: white;
+    background: #8a5a76;
+    color: white;
 }
 .about-card {
     max-width: 900px;
@@ -203,11 +249,12 @@ opacity: 0.95;
 }
 
 .about-card h2 {
+    color: #5a3d52;
     margin-bottom: 20px;
 }
 
 .about-card p {
-    color: #53635c;
+    color: #4d4149 !important;
     font-size: 17px;
     margin-bottom: 15px;
 }
@@ -233,14 +280,14 @@ opacity: 0.95;
 }
 
 .skill-card h3 {
-    color: #315447;
+    color: #5a3d52;
     margin-bottom: 10px;
     font-size: 20px;
 }
 
 .skill-card p {
-    color: #68766f;
-    font-size: 14px;
+    color: #4a3d45 !important;
+    font-size: 500;
 }
 
 .skill-card:hover {
@@ -304,8 +351,8 @@ opacity: 0.95;
 }
 
 .project-content p {
-    color: #68766f;
-    font-size: 15px;
+    color: #4a3d45 !important;
+    font-size: 500;
     margin-bottom: 20px;
 }
 
@@ -313,7 +360,7 @@ opacity: 0.95;
     display: inline-block;
     padding: 10px 20px;
     border-radius: 25px;
-    background: #315447;
+    background: #8a5a76;
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -321,7 +368,7 @@ opacity: 0.95;
 }
 
 .project-button:hover {
-    background: #a67c52;
+    background: #6f435f;
 }
 @media (max-width: 800px) {
     .projects-container {
@@ -392,7 +439,7 @@ opacity: 0.95;
 }
 
 .project-content h3 {
-    color: #315447;
+    color: #5a3d52;
     font-size: 23px;
     margin: 10px 0;
 }
@@ -444,13 +491,13 @@ opacity: 0.95;
 }
 
 .contact-card h2 {
-    color: #315447;
+    color: #5a3d52;
     font-size: 34px;
     margin-bottom: 15px;
 }
 
 .contact-card p {
-    color: #68766f;
+    color: #4d4149 !important;
     line-height: 1.7;
 }
 
@@ -498,4 +545,38 @@ opacity: 0.95;
     #projects > h2 {
         font-size: 30px;
     }
+}
+#home {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+#home h1,
+#home p,
+#home a {
+    position: relative;
+    z-index: 2;
+}
+#about,
+#skills,
+#projects,
+#contact{
+      background: #e8dce5;
+}
+a{
+     color: #6b3f5b;
+     font-weight: 600;
+}
+a:hover {
+     color: #4d2b42;
 }
